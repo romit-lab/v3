@@ -53,9 +53,9 @@ const About: React.FC = () => {
             </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-amber-100 leading-relaxed mb-6">
-                We acknowledge that Gaboodjoolup Cafe is located on Whadjuk Noongar Country, 
-                in the area known as Boorloo (Perth). We pay our deepest respects to the 
-                Traditional Owners of this land, the Whadjuk people of the Noongar Nation.
+                We acknowledge that Gaboodjoolup Cafe is located on Whadjuk Noongar Country. 
+                We pay our deepest respects to the Traditional Owners of this land, the 
+                Whadjuk people of the Noongar Nation.
               </p>
               <p className="text-amber-200 leading-relaxed mb-6">
                 We honor the Elders past, present and emerging, and acknowledge their 
