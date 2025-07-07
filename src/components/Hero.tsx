@@ -2,6 +2,13 @@ import React from 'react';
 import { ArrowRight, Heart } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Indigenous-inspired background patterns */}
@@ -61,11 +68,17 @@ const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+          <button 
+            onClick={() => scrollToSection('opportunities')}
+            className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+          >
             Explore Opportunities
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="border-2 border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-amber-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+          <button 
+            onClick={() => scrollToSection('culture')}
+            className="border-2 border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-amber-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+          >
             Learn About Us
           </button>
         </div>
