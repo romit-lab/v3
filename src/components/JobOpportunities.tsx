@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Users, ChefHat, Hammer, GraduationCap, TrendingUp } from 'lucide-react';
+import { Briefcase, Users, ChefHat, Hammer, GraduationCap, TrendingUp, Handshake } from 'lucide-react';
 
 const JobOpportunities: React.FC = () => {
   const opportunities = [
@@ -44,6 +44,21 @@ const JobOpportunities: React.FC = () => {
     "Transition to governance and ownership roles over time",
     "Cultural leave for traditional ceremonies and obligations",
     "Professional development with cultural competency focus"
+  ];
+
+  const industryPartners = [
+    {
+      name: "Kuditj",
+      description: "Providing specialized training in Aboriginal business practices and cultural protocols"
+    },
+    {
+      name: "Gather Foods",
+      description: "Supporting food service training and sustainable kitchen operations"
+    },
+    {
+      name: "Waalitj Business Hub",
+      description: "Offering business development support and entrepreneurship training"
+    }
   ];
 
   return (
@@ -126,7 +141,7 @@ const JobOpportunities: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-amber-900 to-orange-800 rounded-2xl p-8 text-white text-center">
+        <div className="bg-gradient-to-r from-amber-900 to-orange-800 rounded-2xl p-8 sm:p-12 text-white text-center mb-16">
           <h3 className="text-2xl font-bold mb-4">Community-Led Employment</h3>
           <p className="text-amber-100 mb-6 max-w-2xl mx-auto">
             All positions are designed with community input and Elder guidance. 
@@ -146,6 +161,39 @@ const JobOpportunities: React.FC = () => {
               <div className="text-2xl font-bold text-amber-300">12</div>
               <div className="text-sm text-amber-200">Leadership Positions</div>
             </div>
+          </div>
+        </div>
+
+        <div className="bg-stone-50 rounded-2xl p-8 sm:p-12">
+          <h3 className="text-2xl font-bold text-amber-900 mb-6 text-center flex items-center justify-center">
+            <Handshake className="w-8 h-8 mr-3 text-amber-600" />
+            Industry Training Partners
+          </h3>
+          <p className="text-stone-600 mb-8 text-center max-w-3xl mx-auto">
+            We work with respected industry partners to provide comprehensive training 
+            and ongoing business support, ensuring our staff receive the highest quality 
+            professional development while maintaining cultural integrity.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industryPartners.map((partner, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-amber-600 hover:shadow-xl transition-shadow duration-300"
+              >
+                <h4 className="text-lg font-semibold text-amber-900 mb-3">
+                  {partner.name}
+                </h4>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  {partner.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <p className="text-stone-600 text-sm">
+              These partnerships ensure our team receives industry-leading training while 
+              maintaining our commitment to Aboriginal business practices and cultural values.
+            </p>
           </div>
         </div>
       </div>
