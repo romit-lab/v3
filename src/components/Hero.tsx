@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         </div>
         
         <p className="text-xl sm:text-2xl text-stone-200 mb-8 leading-relaxed max-w-4xl mx-auto">
-          A place where Whadjuk Noongar culture thrives, opportunities flourish, 
+          Located in South Perth, a place where Whadjuk Noongar culture thrives, opportunities flourish, 
           and community bonds strengthen through shared stories, traditional foods, 
           and meaningful connections on Country.
         </p>
